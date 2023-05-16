@@ -1,3 +1,48 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": [
+    "prettier/prettier"
+  ],
+  "overrides": [{
+    "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+    "rules": {
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        }
+      ],
+      "linebreak-style": 0,
+  "react/button-has-type": 0,
+  "max-len": 0,
+  "react/react-in-jsx-scope": 0,
+  "@typescript-eslint/naming-convention": [
+    "error",
+    {
+      "selector": "default",
+      "format": ["camelCase"]
+    },
+  ],
+  "react/jsx-max-props-per-line": [
+    2,
+    {
+      "maximum": 1,
+      "when": "multiline"
+    }
+  ],
+  "react/jsx-indent-props": [2, 2],
+  "prettier/prettier": [
+    "error",
+    {
+      "singleQuote": true,
+      "tabWidth": 2,
+      "endOfLine": "auto",
+      "proseWrap": "preserve",
+      "trailingComma": "all",
+      "parser": "typescript"
+    }
+  ]
+    }
+  }
+]
 }
